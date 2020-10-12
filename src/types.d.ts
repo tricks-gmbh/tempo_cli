@@ -9,7 +9,7 @@ export interface TempoTimeEntry {
   attributes: Attributes;
   worker: string;
   updater: string;
-  started: Date;
+  started: string; /** Date */
   dateCreated: Date;
   dateUpdated: Date;
   originTaskId: number;
@@ -53,4 +53,8 @@ export interface NewTimeEntryRequest {
   remainingEstimate: null;
   endDate: null;
   includeNonWorkingDays: boolean;
+}
+
+export interface TempoTimeEntryByDay {
+  [day: string]: TempoTimeEntry[];
 }

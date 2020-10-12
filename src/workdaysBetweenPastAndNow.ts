@@ -12,7 +12,6 @@ function getDaysArray(start: Date, end: Date) {
 
 function arrayOfDaysBetweenPastAndNow(pastDate: Date | string) {
   const daylist = getDaysArray(new Date(pastDate), new Date());
-  console.log(daylist);
   daylist.map((v) => v.toISOString().slice(0, 10)).join("");
   return daylist;
 }
