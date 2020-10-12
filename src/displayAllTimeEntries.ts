@@ -31,7 +31,7 @@ export default (entries: TempoTimeEntry[]) => {
       const everyEntryCol = [
         entry.timeSpent,
         `${entry.issue.key} ${entry.issue.summary.substr(0, 40)}`,
-        entry.comment,
+        entry.comment.substr(0, 35),
       ];
       if (index !== 0) {
         return table.push(everyEntryCol);
